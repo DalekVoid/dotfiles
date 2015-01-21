@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+set noerrorbells
+
 set expandtab "tab to spaces
 set tabstop=2
 set shiftwidth=2
@@ -28,12 +30,20 @@ colorscheme solarized
 set splitbelow
 set splitright 
 
-
 execute pathogen#infect()
 
 set expandtab "tab to spaces
 set tabstop=2
 set shiftwidth=2
+
+" There need to be a space after cppmain, otherwise it won't work
+iab cppmain 
+\#include<iostream>
+\<CR>using namespace std;
+\<CR>
+\<CR>int main(int argc, char** argv) {
+\<CR>  return 0;
+\<CR>}
 
 set number
 set autoindent
