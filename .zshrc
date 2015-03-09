@@ -41,5 +41,12 @@ alias ia="cd ~/iAWriterPro"
 alias ls="ls -G" # Show directory and file in colors
 
 alias nictest="doctest -isrc -Wall -fno-warn-type-defaults" # shortcut command for NICTA functional programming course
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/DalekVoid/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables bash completion for gcloud.
+source '/Users/DalekVoid/google-cloud-sdk/completion.zsh.inc'
