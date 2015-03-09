@@ -23,6 +23,13 @@ export MIT_SCHEME_EXE="/usr/local/scheme"
 export GOPATH="$HOME/Developer/golang"
 export PATH=$PATH:$GOPATH/bin
 
+# Setting Go AppEngine Path
+export PATH=/usr/local/go_appengine:$PATH
+
+# Setting Cabal Path
+export PATH=$HOME/Library/Haskell/bin:$PATH
+
+
 # Alias
 alias scs="screencapture -oxPs" # Capture screen with mouse selection
 alias scw="screencapture -oxPw" # Capture screen with window selection
@@ -32,5 +39,7 @@ alias des="cd ~/Graphics\ \&\ Design"
 alias ia="cd ~/iAWriterPro"
 
 alias ls="ls -G" # Show directory and file in colors
+
+alias nictest="doctest -isrc -Wall -fno-warn-type-defaults" # shortcut command for NICTA functional programming course
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
