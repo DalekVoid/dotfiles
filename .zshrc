@@ -24,11 +24,10 @@ export GOPATH="$HOME/Developer/golang"
 export PATH=$PATH:$GOPATH/bin
 
 # Setting Go AppEngine Path
-export PATH=/usr/local/go_appengine:$PATH
+export PATH="/usr/local/go_appengine:$PATH"
 
 # Setting Cabal Path
 export PATH=$HOME/Library/Haskell/bin:$PATH
-
 
 # Alias
 alias scs="screencapture -oxPs" # Capture screen with mouse selection
@@ -40,10 +39,16 @@ alias ia="cd ~/iAWriterPro"
 
 alias ls="ls -G" # Show directory and file in colors
 
+# vim and Appengine workaround
+export APPENGINE_SDK="/usr/local/go_appengine"
+alias appvim="export GOROOT=$APPENGINE_SDK/goroot/ && vim"
+
 alias nictest="doctest -isrc -Wall -fno-warn-type-defaults" # shortcut command for NICTA functional programming course
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Enable vim compiler to find Appengine SDK
 
 # The next line updates PATH for the Google Cloud SDK.
 source '/Users/DalekVoid/google-cloud-sdk/path.zsh.inc'
