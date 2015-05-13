@@ -5,6 +5,7 @@ set noerrorbells
 set expandtab "tab to spaces
 set tabstop=2
 set shiftwidth=2
+autocmd FileType go setlocal shiftwidth=8 tabstop=8
 
 set number
 set autoindent
@@ -29,12 +30,6 @@ colorscheme solarized
 
 set splitbelow
 set splitright 
-
-execute pathogen#infect()
-
-set expandtab "tab to spaces
-set tabstop=2
-set shiftwidth=2
 
 " There need to be a space after cppmain, otherwise it won't work
 iab cppmain 
@@ -44,30 +39,6 @@ iab cppmain
 \<CR>int main(int argc, char** argv) {
 \<CR>  return 0;
 \<CR>}
-
-set number
-set autoindent
-set ruler "show current cursor position
-set cursorline
-syntax enable 
-
-" enable cursor in terminal
-if has('mouse')
-  set mouse=a
-endif
-
-if has('gui_running')
-  set background=light
-else
-  set background=dark
-endif
-" Since I adopted iTerm 2 which support sRGB Color,
-" It is no longer necessary to fall back to 256 palette.
-"let g:solarized_termcolors=256
-colorscheme solarized 
-
-set splitbelow
-set splitright 
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
